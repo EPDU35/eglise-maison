@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Connexion Admin - Église De Maison</title>
+    <style>
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 5%;
+            background: #0a0a0a;
+        }
+
+        .login-box {
+            max-width: 450px;
+            width: 100%;
+            background: #0f0f0f;
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #1a1a1a;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .login-header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .login-header p {
+            color: #777;
+            font-size: 0.95rem;
+        }
+
+        .error-message {
+            display: none;
+            padding: 1rem;
+            background: #2f0a0a;
+            border-left: 3px solid #dc3545;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .error-message p {
+            color: #ff6b6b;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .back-link a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .back-link a:hover {
+            color: #fff;
+        }
+
+        .password-toggle {
+            position: relative;
+        }
+
+        .password-toggle input {
+            padding-right: 3rem;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .toggle-btn:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="entete">
+        <div class="logo">
+            <h2>Église De Maison</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#inscription">S'inscrire</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>Administration</h1>
+                <p>Connectez-vous pour accéder au panel admin</p>
+            </div>
+
+            <div id="errorMessage" class="error-message">
+                <p>Identifiant ou mot de passe incorrect</p>
+            </div>
+
+            <form id="formLogin">
+                <div class="input-box">
+                    <label for="identifiant">Identifiant</label>
+                    <input type="text" id="identifiant" placeholder="Entrez votre identifiant" required autofocus>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Mot de passe</label>
+                    <div class="password-toggle">
+                        <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+                        <button type="button" class="toggle-btn" id="togglePassword">Voir</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Se connecter</button>
+            </form>
+
+            <div class="back-link">
+                <a href="index.html">← Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Développer par <a href="https://elielposter.com/">Eliel Poster</a>- Tous droits réservés</p>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
