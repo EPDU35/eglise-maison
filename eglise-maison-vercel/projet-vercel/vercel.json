@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/api/auth/login", "destination": "/api/auth/login.js" },
+    { "source": "/api/auth/init", "destination": "/api/auth/init.js" },
+    { "source": "/api/inscrits/stats", "destination": "/api/inscrits/stats.js" },
+    { "source": "/api/inscrits/:id", "destination": "/api/inscrits/[id].js" },
+    { "source": "/api/inscrits", "destination": "/api/inscrits/index.js" },
+    { "source": "/api/users/password", "destination": "/api/users/password.js" },
+    { "source": "/api/users/:id", "destination": "/api/users/[id].js" },
+    { "source": "/api/users", "destination": "/api/users/index.js" },
+    { "source": "/admin", "destination": "/frontend/admin.html" },
+    { "source": "/admin-login", "destination": "/frontend/admin-login.html" },
+    { "source": "/js/:file", "destination": "/frontend/js/:file" },
+    { "source": "/admin.css", "destination": "/frontend/admin.css" },
+    { "source": "/style.css", "destination": "/frontend/style.css" },
+    { "source": "/", "destination": "/frontend/index.html" }
+  ]
+}
