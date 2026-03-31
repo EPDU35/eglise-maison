@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Église De Maison - Région de Daloa</title>
+</head>
+<body>
+    <div class="entete">
+        <div class="logo">
+            <h2>Église De Maison</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#inscription">Inscription</a></li>
+                <li><a href="admin-login.html">Administration</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section id="accueil" class="hero">
+        <h1>Inscription des Membres</h1>
+        <p>Complétez le formulaire ci-dessous pour finaliser votre inscription</p>
+        <a href="#inscription" class="btn-hero">Commencer</a>
+    </section>
+
+    <section id="inscription">
+        <div class="form-box">
+            <h2>Formulaire d'Inscription</h2>
+            <p>Tous les champs sont obligatoires</p>
+
+            <div id="message" class="message"></div>
+
+            <form id="formInscription">
+                <div class="input-box">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" placeholder="Votre nom" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="prenoms">Prénoms</label>
+                    <input type="text" id="prenoms" placeholder="Vos prénoms" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Sexe</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="sexe" value="Homme" required>
+                            <span>Homme</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="sexe" value="Femme" required>
+                            <span>Femme</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="dateNaissance">Date de Naissance</label>
+                    <input type="date" id="dateNaissance" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="lieuNaissance">Lieu de Naissance</label>
+                    <input type="text" id="lieuNaissance" placeholder="Ville de naissance" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="zone">Zone</label>
+                    <select id="zone" required>
+                        <option value="">Sélectionner</option>
+                        <option value="LOBIA">LOBIA</option>
+                        <option value="LABIA">LABIA</option>
+                        <option value="UBERSONE">HUBERSON</option>
+                        <option value="ZOUKOUGBE">ZOUKOUGBEU</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label for="egliseLocale">Église Locale</label>
+                    <select id="egliseLocale" required>
+                        <option value="">Sélectionner</option>
+                        <option value="LOBIA">LOBIA</option>
+                        <option value="TAZIBOUO">TAZIBOUO</option>
+                        <option value="KENEDI">KENEDY</option>
+                        <option value="OUROUTA">OUROUTA</option>
+                        <option value="TAGOURA">TAGOURA</option>
+                        <option value="BRIZEBOUA">BRIZEBOUA</option>
+                        <option value="LABIA">LABIA</option>
+                        <option value="BETLEME">BETHLEME</option>
+                        <option value="GADOUAN">GADOUAN</option>
+                        <option value="GONATE">GONATE</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label for="direction">Direction</label>
+                    <select id="direction" required>
+                        <option value="">Sélectionner</option>
+                        <option value="HOMME">HOMME</option>
+                        <option value="FEMME">FEMME</option>
+                        <option value="JEUNESSE">JEUNESSE</option>
+                        <option value="DFD">DFD</option>
+                        <option value="DFNC">DFNC</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label for="responsabilite">Responsabilité</label>
+                    <select id="responsabilite" required>
+                        <option value="">Sélectionner</option>
+                        <option value="REPRESENTANT_REGION">Représentant de Région</option>
+                        <option value="RESPONSABLE_DIRECTION">Responsable de Direction</option>
+                        <option value="ZONALE_PRINCIPALE">Zonale Principale</option>
+                        <option value="ZONALE">Zonale</option>
+                        <option value="SECTEUR">Secteur</option>
+                        <option value="OUVRIER">Ouvrier</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label for="contact">Contact</label>
+                    <input type="tel" id="contact" placeholder="Numéro de téléphone" required>
+                </div>
+
+                <button type="submit" class="btn-submit" id="btnSubmit">
+                    <span class="btn-text">Valider l'inscription</span>
+                    <span class="btn-loader" style="display:none;">Envoi en cours...</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Développé par <a href="https://elielposter.com/" target="_blank" rel="noopener">Eliel Poster</a></p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>

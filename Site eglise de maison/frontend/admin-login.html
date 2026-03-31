@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin-style.css">
+    <title>Administration - Église De Maison</title>
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>Administration</h1>
+                <p>Connexion sécurisée</p>
+            </div>
+
+            <div id="errorMessage" class="error-message"></div>
+
+            <form id="formLogin">
+                <div class="input-box">
+                    <label for="identifiant">Identifiant</label>
+                    <input type="text" id="identifiant" placeholder="Votre identifiant" required autofocus>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Mot de passe</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" placeholder="Votre mot de passe" required>
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <span class="show-text">Afficher</span>
+                            <span class="hide-text" style="display:none;">Masquer</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit" id="btnLogin">
+                    <span class="btn-text">Se connecter</span>
+                    <span class="btn-loader" style="display:none;">Connexion...</span>
+                </button>
+            </form>
+
+            <div class="back-link">
+                <a href="index.html">Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Développé par <a href="https://elielposter.com/" target="_blank" rel="noopener">Eliel Poster</a></p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
